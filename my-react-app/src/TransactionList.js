@@ -2,21 +2,21 @@ import Transaction from "./Transaction";
 
 function TransactionList({data}){
     return(
-    <table className="table table-light">
+    <table >
       <tbody>
         <tr>
           <th>
             <h3 >Date</h3>
           </th>
           <th>
-            <h3 className="ui center aligned header">Description</h3>
+            <h3 >Description</h3>
           
           </th>
           <th>
-            <h3 className="ui center aligned header">Category</h3>
+            <h3 >Category</h3>
           </th>
           <th>
-            <h3 className="ui center aligned header">Amount</h3>
+            <h3>Amount</h3>
           </th>
         </tr>
 
