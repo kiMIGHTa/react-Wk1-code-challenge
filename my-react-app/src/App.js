@@ -31,6 +31,11 @@ function App() {
       
     }
 
+    function deleteTransaction(transDelete) {
+      const newTransacs = accountData.filter((dataItem) => dataItem.description !== transDelete.description)
+      return setAccountData(newTransacs)
+    }
+
 
 
 
@@ -43,7 +48,7 @@ function App() {
       <SearchBar className="search-bar" searchFunction={searchFunction}/>
       </div>
       <AddNewTransaction className="add-transaction-form" handleSubmit={submitForm}/>
-      <TransactionList className="transaction-list" data={accountData}/>
+      <TransactionList className="transaction-list" data={accountData} deletesTransaction={deleteTransaction}/>
     </div>
   )
 

@@ -1,7 +1,9 @@
 import Transaction from "./Transaction";
 import "./TransactionList.css"
 
-function TransactionList({data}){
+function TransactionList({data, deletesTransaction}){
+
+
     return(
     <table className="transaction-table" >
       <tbody>
@@ -24,7 +26,7 @@ function TransactionList({data}){
       
                {
           data.map(dataItem => {
-            return <Transaction key={dataItem.id} date={dataItem.date} description={dataItem.description} category={dataItem.category} amount={dataItem.amount} />
+            return <Transaction key={dataItem.id} date={dataItem.date} description={dataItem.description} category={dataItem.category} amount={dataItem.amount} handlesDelete={()=>deletesTransaction(data)} />
           })
         }
       </tbody>
