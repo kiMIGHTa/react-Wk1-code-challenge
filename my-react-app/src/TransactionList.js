@@ -1,8 +1,9 @@
 import Transaction from "./Transaction";
+import "./TransactionList.css"
 
 function TransactionList({data}){
     return(
-    <table >
+    <table className="transaction-table" >
       <tbody>
         <tr>
           <th>

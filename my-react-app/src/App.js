@@ -35,10 +35,15 @@ function App() {
 
 
   return (
-    <div>
-      <SearchBar searchFunction={searchFunction}/>
-      <AddNewTransaction handleSubmit={submitForm}/>
-      <TransactionList data={accountData}/>
+    <div className='container'>
+      <div className='header'>
+        <h1>BANK OF FLAT-IRON</h1>
+      </div>
+      <div>
+      <SearchBar className="search-bar" searchFunction={searchFunction}/>
+      </div>
+      <AddNewTransaction className="add-transaction-form" handleSubmit={submitForm}/>
+      <TransactionList className="transaction-list" data={accountData}/>
     </div>
   )
 

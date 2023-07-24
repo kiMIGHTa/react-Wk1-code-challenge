@@ -1,0 +1,41 @@
+
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .transaction-table th,
+  .transaction-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .transaction-table th {
+    font-weight: bold;
+    background-color: #f2f2f2;
+  }
+  
+  .transaction-table td {
+    font-size: 16px;
+  }
+  
+  .transaction-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .transaction-table h3 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: normal;
+  }
+  
+  .transaction-table td:nth-child(4) {
+    text-align: right;
+  }
+  
+  /* Optional: Add some space between table rows for better readability */
+  .transaction-table tr {
+    margin-bottom: 5px;
+  }

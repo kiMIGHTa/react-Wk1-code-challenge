@@ -1,6 +1,5 @@
 import { useState } from "react"
-import Transaction from "./Transaction"
-
+import './AddNewTransaction.css'
 
 function AddNewTransaction({handleSubmit}){
     let x=15

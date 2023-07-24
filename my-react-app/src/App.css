@@ -1,1 +1,48 @@
 
+div {
+  margin: 3%;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+ .header {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: blueviolet;
+  padding: 1%;
+}
+
+/* Styling for the SearchBar */
+.search-bar {
+  margin-bottom: 10px;
+}
+
+
+
+
+
+/* Styling for the TransactionList */
+.transaction-list {
+  list-style: none;
+  padding: 0;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Styling for the TransactionList item details */
+.transaction-item .description {
+  flex: 1;
+}
+
+.transaction-item .amount {
+  flex-basis: 120px;
+  text-align: right;
+}
