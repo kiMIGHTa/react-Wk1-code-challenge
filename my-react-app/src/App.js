@@ -17,6 +17,10 @@ function App() {
       })
   },[])
 
+  function submitForm(data){
+    return setAccountData([...accountData, data])
+  }
+
   function searchFunction(searchTerms){
     fetch("http://localhost:3000/transactions")
       .then(response => response.json())
@@ -36,7 +40,7 @@ function App() {
   return (
     <div>
       <SearchBar searchFunction={searchFunction}/>
-      <AddNewTransaction data={accountData}/>
+      <AddNewTransaction handleSubmit={submitForm}/>
       <TransactionList data={accountData}/>
     </div>
   )

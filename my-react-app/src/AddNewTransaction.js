@@ -2,7 +2,7 @@ import { useState } from "react"
 import Transaction from "./Transaction"
 
 
-function AddNewTransaction(){
+function AddNewTransaction({handleSubmit}){
     let x=15
 
     const [formData, setFormData] = useState({
@@ -16,18 +16,21 @@ function AddNewTransaction(){
     function handleChange(e){
         e.preventDefault()
         setFormData({...formData, [e.target.name]: e.target.value})
+        
 
     }
 
-    function submitChange(e, data){
+    function submitChange(e){
         e.preventDefault()
-        return <Transaction key={data.id} date={data.date} description={data.description} category={data.category} amount={data.amount} />
+        handleSubmit(formData)
+        e.target.reset()
+        
 
     }
 
     return(
         <div>
-            <form onSubmit={(e)=>{submitChange(e,formData)}}>             
+            <form onSubmit={submitChange}>             
             <input type="date" name="date" placeholder="date" onChange={handleChange}/>
             <input type="text" name="description" placeholder="description" onChange={handleChange}/>
             <input type="text" name="category" placeholder="category" onChange={handleChange}/>
