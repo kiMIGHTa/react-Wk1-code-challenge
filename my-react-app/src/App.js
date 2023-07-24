@@ -21,17 +21,14 @@ function App() {
     return setAccountData([...accountData, data])
   }
 
-  function searchFunction(searchTerms){
-    fetch("http://localhost:3000/transactions")
-      .then(response => response.json())
-      .then(data => {
-        const filtered = data.filter(item => {
-          return item.description.includes(searchTerms)
+  async function searchFunction(searchTerms){
+  
+        const filtered = accountData.filter(dataItem => {
+          return dataItem.description.includes(searchTerms)
           
         })
         setAccountData(filtered)
-        console.log(filtered)
-      })
+      
     }
 
 
